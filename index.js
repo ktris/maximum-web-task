@@ -1,7 +1,7 @@
 const express = require('express')
 
 const techRouter = require('./routes/tech.routes')
-const employeesRouter = require('./routes/tech.routes')
+const employeesRouter = require('./routes/employees.routes')
 const providersRouter = require('./routes/providers.routes')
 const moveController = require('./routes/move.routes')
 const repairController = require('./routes/repair.routes')
