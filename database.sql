@@ -22,6 +22,7 @@ create TABLE employees(
     surname VARCHAR(20),
     second_name VARCHAR(20),
     phone_number VARCHAR(20),
+    adress_name VARCHAR(255),
     job_title VARCHAR(255),
     state_name VARCHAR(255)
 );
