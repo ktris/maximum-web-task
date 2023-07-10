@@ -24,8 +24,8 @@ class TechController{
     async updateTech(req, res){
         const {id_item, name_technique, accessories, descript, state, date_of_buy, id_employee, id_provider, id_move, id_repair, availability} = req.body
         const newTech = await db.query(
-            'UPDATE technique set name_technique = $1, accessories = $2, descript = $3, state = $4, date_of_buy = $5, id_employee = $6, id_provider = $7, id_move = $8, id_repair = $9, availability = $10 where id_item = $13 RETURNING *',
-            [name_technique, accessories, descript, state, date_of_buy, id_employee, id_provider, id_move, id_repair, availability, id_item,])
+            'UPDATE technique set name_technique = $1, accessories = $2, descript = $3, state = $4, date_of_buy = $5, id_employee = $6, id_provider = $7, id_move = $8, id_repair = $9, availability = $10 where id_item = $11 RETURNING *',
+            [name_technique, accessories, descript, state, date_of_buy, id_employee, id_provider, id_move, id_repair, availability, id_item])
     
         res.json(newTech.rows[0])
     }
